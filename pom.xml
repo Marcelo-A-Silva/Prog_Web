@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.unisul.pweb.quarta</groupId>
-	<artifactId>Prog_Web</artifactId>
+	<artifactId>pweb_quarta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Prog_Web</name>
-	<description>Projeto_Inicial</description>
+	<name>pweb_quarta</name>
+	<description>Projeto disciplina pweb turma quarta feira</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -32,11 +32,20 @@
 		
 		<dependency>
 			<groupId>mysql</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-	
 		
-	</dependencies>	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		
+	</dependencies>
 
 	<build>
 		<plugins>

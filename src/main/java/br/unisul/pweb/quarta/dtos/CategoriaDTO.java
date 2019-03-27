@@ -1,28 +1,35 @@
-package br.unisul.pweb.quarta.domain;
+package br.unisul.pweb.quarta.dtos;
 
 import java.io.Serializable;
 
-public class Categoria implements Serializable{
+import br.unisul.pweb.quarta.domain.Categoria;
 
-	/**
-	 * 
-	 */
+public class CategoriaDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
 	
 	private Integer id;
 	private String nome;
 	
-	public Categoria(Integer id, String nome) {
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
 		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 	
-	public Categoria() {
-		
+	public  CategoriaDTO(Categoria c) {
+		id		= c.getId();
+		nome 	= c.getNome();
 	}
 	
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -30,10 +37,6 @@ public class Categoria implements Serializable{
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
-
-
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -42,7 +45,7 @@ public class Categoria implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Categoria other = (Categoria) obj;
+		CategoriaDTO other = (CategoriaDTO) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -50,26 +53,6 @@ public class Categoria implements Serializable{
 			return false;
 		return true;
 	}
-
-	
-	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
 	
 	
 	
